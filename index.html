@@ -28,6 +28,12 @@
 @font-face{font-family:'Rubik';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/Rubik-Bold.woff2) format('woff2')}
 @font-face{font-family:'Noto Sans';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/NotoSans-Regular.woff2) format('woff2')}
 @font-face{font-family:'Noto Sans';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/NotoSans-Bold.woff2) format('woff2')}
+
+.founding-intro{display:grid;grid-template-columns:1fr;gap:40px;align-items:center;margin-bottom:56px}
+@media(min-width:900px){.founding-intro{grid-template-columns:1.1fr .9fr;gap:64px}.founding-intro .founding-header{text-align:left;margin-bottom:0}.founding-intro h2{font-size:clamp(1.8rem,3.4vw,2.6rem)}.founding-intro .founding-header p{margin:0}}
+.founding-card{margin:0;max-width:520px;justify-self:center}
+.founding-card img{width:100%;height:auto;border-radius:6px;border:1px solid rgba(201,169,110,.35);box-shadow:0 24px 48px rgba(0,0,0,.35)}
+.founding-card figcaption{margin-top:12px;font-size:.8rem;color:var(--fog);text-align:center;letter-spacing:.02em}
 </style>
 <style>
 :root {
@@ -380,10 +386,16 @@ img { max-width: 100%; display: block; }
 <section class="section section-navy founding" id="founding">
   <div class="founding-arc"></div>
   <div class="container founding-content">
-    <div class="founding-header fade-up">
-      <div class="eyebrow">Founding Membership</div>
-      <h2>Founding members lock their rate. From $49.99 a month.</h2>
-      <p>The first cohort helps establish the conversations and culture of the community. Founding members receive a permanent founding designation and a locked founding rate for the life of their membership.</p>
+    <div class="founding-intro">
+      <div class="founding-header fade-up">
+        <div class="eyebrow">Founding Membership</div>
+        <h2>Founding members lock their rate. From $49.99 a month.</h2>
+        <p>The first cohort helps establish the conversations and culture of the community. Founding members receive a permanent founding designation and a locked founding rate for the life of their membership.</p>
+      </div>
+      <figure class="founding-card fade-up">
+        <img src="founding-member-card-front-outlined.svg" alt="Founding Member card specimen showing No. 001 and Founding Rate Locked">
+        <figcaption>Specimen. Numbers are assigned in order of joining.</figcaption>
+      </figure>
     </div>
     <div class="pricing-grid">
       <div class="price-card fade-up">
