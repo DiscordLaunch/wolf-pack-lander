@@ -301,7 +301,10 @@ img { max-width: 100%; display: block; }
 .steps-section{background:var(--paper);color:var(--ink)}
 .steps-grid{display:grid;grid-template-columns:1fr;gap:32px}
 @media(min-width:768px){.steps-grid{grid-template-columns:repeat(3,1fr)}}
-.step{border-top:2px solid var(--navy);padding-top:20px}
+.step{border-top:2px solid var(--navy);padding-top:20px;display:flex;flex-direction:column}
+.step p{flex:1}
+.step .step-link{margin-top:20px;align-self:flex-start}
+.steps-grid{align-items:stretch}
 .step-num{font-family:'Rubik',sans-serif;font-size:14px;color:var(--brass);letter-spacing:.14em;margin-bottom:12px}
 .step h3{font-size:1.25rem;margin-bottom:10px;color:var(--navy)}
 .step p{font-size:.95rem;color:var(--fog-dark);line-height:1.6}
@@ -429,7 +432,7 @@ img { max-width: 100%; display: block; }
       </div>
       <div class="step" data-step="3">
         <div class="step-num"><span class="step-check" aria-hidden="true"></span>03 / SHOW UP</div>
-        <h3>Learn the layout. Mark the next Pack Session.</h3>
+        <h3>Mark the next Pack Session</h3>
         <p>Start Here shows how the community is laid out. Pack Sessions are the live calls with Scott and the community. Put the next one on your calendar.</p>
         <a class="step-link" href="REPLACE-SCHEDULE-LINK" data-complete="3" target="_blank" rel="noopener">See the schedule →</a>
       </div>
