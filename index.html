@@ -194,9 +194,10 @@ img { max-width: 100%; display: block; }
 .nav-brand{display:flex;align-items:center;gap:12px}
 .hero-campaign{font-family:'Rubik',sans-serif;font-size:1.05rem;color:var(--brass);margin-bottom:16px}
 .hero-meta{font-size:14px;color:var(--fog)}
+.hero-meta-light{font-size:13px;color:rgba(183,185,186,.7);border-top:0;padding-top:12px}
 .hero-meta-dot{width:4px;height:4px;border-radius:50%;background:var(--brass);align-self:center}
 .hero-portrait img{width:100%;height:100%;object-fit:cover;object-position:center top}
-@media(max-width:899px){.hero-portrait{max-width:420px;aspect-ratio:1/1}}
+@media(max-width:899px){.hero{padding-top:100px}.hero-portrait{max-width:300px;aspect-ratio:1/1}.hero-reveal{width:min(300px,100%)}.hero-headline{font-size:clamp(1.8rem,8vw,2.4rem)}.hero-endorse{margin-bottom:20px}}
 .pricing-grid{display:grid;grid-template-columns:1fr;gap:24px;max-width:900px;margin:0 auto}
 @media(min-width:768px){.pricing-grid{grid-template-columns:1fr 1fr}}
 .price-card{background:rgba(243,239,230,.04);border:1px solid rgba(201,169,110,.25);border-radius:var(--radius);padding:40px 36px;display:flex;flex-direction:column;gap:16px}
@@ -311,10 +312,10 @@ img { max-width: 100%; display: block; }
       <h1 class="hero-headline">The team, research, and network behind Scott Melker. In one room.</h1>
       <p class="hero-subheadline">A curated community built around the team, research, and relationships behind Scott's work. Bring your questions. Add your perspective. Get to know the people in the room.</p>
       <div class="cta-group">
-        <a href="#founding" class="btn btn-brass btn-large">Explore the membership</a>
+        <a href="#founding" class="btn btn-brass btn-large">Join the Pack</a>
         <a href="#opens-up" class="btn btn-outline-paper btn-large">See what's in the room</a>
       </div>
-      <div class="hero-meta">
+      <div class="hero-meta hero-meta-light">
         <span>Education and discussion. Not investment advice.</span>
       </div>
     </div>
@@ -332,7 +333,7 @@ img { max-width: 100%; display: block; }
       <div class="credibility-divider"></div>
       <div class="credibility-item"><div class="credibility-value">Yahoo Finance</div><div class="credibility-label">Syndicated Show</div></div>
       <div class="credibility-divider"></div>
-      <div class="credibility-item"><div class="credibility-value">5 Live</div><div class="credibility-label">Sessions Every Weekday</div></div>
+      <div class="credibility-item"><div class="credibility-value">Live</div><div class="credibility-label">Every weekday</div></div>
       <div class="credibility-divider"></div>
       <div class="credibility-item"><div class="credibility-value">Weekly</div><div class="credibility-label">Scott Live</div></div>
     </div>
@@ -342,9 +343,7 @@ img { max-width: 100%; display: block; }
   <div class="container">
     <div class="trust-band-inner">
       <div class="trust-item fade-up"><div class="trust-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#18263C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div><h4>No pooled funds. No execution. No custody.</h4><p>The Wolf Pack is a curated community focused on research, education and discussion. It never holds, manages, or transacts in your assets.</p></div></div>
-      <div class="trust-item fade-up"><div class="trust-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#18263C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div><h4>Not a signals service.</h4><p>No trade calls, no win-rate promises, no alpha guarantees. Members get context, frameworks, and conversation, not instructions to copy.</p></div></div>
-      <div class="trust-item fade-up"><div class="trust-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#18263C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div><h4>Full disclosure discipline.</h4><p>Sponsor relationships and positions are disclosed. The community operates with transparency about conflicts and interests.</p></div></div>
-      <div class="trust-item fade-up"><div class="trust-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#18263C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div><h4>Education and discussion. Not investment advice.</h4><p>Everything in the room is for learning and conversation. It is not personalized investment advice. Membership access and billing are governed by your membership terms.</p></div></div>
+      <div class="trust-item fade-up"><div class="trust-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#18263C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div><h4>Not a signals service.</h4><p>No trade calls, alerts or targets, from Scott, the team or members. You get context, frameworks and conversation, not instructions to copy.</p></div></div>
     </div>
   </div>
 </section>
@@ -380,7 +379,7 @@ img { max-width: 100%; display: block; }
     <div class="week-intro fade-up">
       <div class="eyebrow">The member week</div>
       <h2>A rhythm the team can run.</h2>
-      <p>Five live sessions every weekday, plus a weekly Scott Live. Every guest slot has a team-run fallback format. The cadence never slips.</p>
+      <p>Live every weekday, plus a weekly Scott Live. Every guest slot has a team-run fallback format. The cadence never slips.</p>
     </div>
     <figure class="session-specimen fade-up">
       <img src="pack-session-scott.jpg" alt="Pack Sessions series artwork: In the room with Scott. Questions worth a conversation." width="1440" height="810" loading="lazy">
@@ -393,17 +392,17 @@ img { max-width: 100%; display: block; }
       <div class="week-day fade-up"><div class="week-day-label">THU</div><div class="week-day-title">Crossover</div><div class="week-day-desc">The show's guest, unfiltered. Members-only. The back-and-forth that doesn't make the edit.</div></div>
       <div class="week-day fade-up"><div class="week-day-label">FRI</div><div class="week-day-title">The Wrap</div><div class="week-day-desc">Weekly wrap and open Q&A. The week's threads pulled together.</div></div>
     </div>
-    <div class="week-monthly fade-up"><div class="week-monthly-label">WEEKLY</div><div class="week-monthly-title">Scott Live</div><div class="week-monthly-desc">A marquee members-only session with Scott every week. Live, unscripted, and open to member questions.</div></div>
+    <div class="week-monthly fade-up"><div class="week-monthly-label">WEEKLY</div><div class="week-monthly-title">Scott Live</div><div class="week-monthly-desc">A marquee members-only session with Scott. Live, unscripted, and open to member questions.</div></div>
     <p class="week-note fade-up">Every guest slot has a team-run fallback format. If a guest can't make it, the session still happens. The cadence never slips.</p>
-    <div class="week-cta fade-up"><a href="#founding" class="btn btn-brass btn-large">Claim your founding spot</a></div>
+    <div class="week-cta fade-up"><a href="#founding" class="btn btn-brass btn-large">Join the Pack</a></div>
   </div>
 </section>
 <section class="section section-paper" id="different">
   <div class="container">
-    <div class="diff-header fade-up"><div class="eyebrow">Why this room</div><h2>Built to survive the failure modes.</h2><p>Every paid community has known ways to die. The Wolf Pack is designed around the answers.</p></div>
+    <div class="diff-header fade-up"><div class="eyebrow">Why this room</div><h2>Built to last.</h2><p>Every paid community has known ways to die. The Wolf Pack is designed around the answers.</p></div>
     <div class="diff-grid">
-      <div class="diff-item fade-up"><div class="diff-check"><svg viewBox="0 0 24 24" fill="none" stroke="#18263C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="diff-content"><h4>Alpha rooms churn after member losses.</h4><p>We never sell win rates. The product is context, education, and peer conversation, not trade calls. When the market turns, the room still has a reason to exist.</p></div></div>
-      <div class="diff-item fade-up"><div class="diff-check"><svg viewBox="0 0 24 24" fill="none" stroke="#18263C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="diff-content"><h4>Research products churn in quiet markets.</h4><p>Community carries the quiet weeks. The member week runs regardless of market conditions. Five live sessions plus weekly Scott Live means the room is always alive.</p></div></div>
+      <div class="diff-item fade-up"><div class="diff-check"><svg viewBox="0 0 24 24" fill="none" stroke="#18263C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="diff-content"><h4>Signal rooms empty out after a losing streak.</h4><p>We never sell win rates. The product is context, education, and peer conversation, not trade calls. When the market turns, the room still has a reason to exist.</p></div></div>
+      <div class="diff-item fade-up"><div class="diff-check"><svg viewBox="0 0 24 24" fill="none" stroke="#18263C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="diff-content"><h4>Research products churn in quiet markets.</h4><p>Community carries the quiet weeks. The member week runs regardless of market conditions. A live session every weekday plus Scott Live means the room is always alive.</p></div></div>
       <div class="diff-item fade-up"><div class="diff-check"><svg viewBox="0 0 24 24" fill="none" stroke="#18263C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="diff-content"><h4>Founder-led rooms die when the host goes quiet.</h4><p>Team-run formats and scheduled Scott. The bench carries the week. Scott's presence is scheduled and high-value, while the team runs the rails every day.</p></div></div>
       <div class="diff-item fade-up"><div class="diff-check"><svg viewBox="0 0 24 24" fill="none" stroke="#18263C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="diff-content"><h4>Big rooms drown in their own noise.</h4><p>A curated founding cohort and a culture that values substance over volume. The room is built for serious peers, not maximum headcount.</p></div></div>
     </div>
@@ -416,7 +415,7 @@ img { max-width: 100%; display: block; }
       <div class="founding-header fade-up">
         <div class="eyebrow">Founding Membership</div>
         <h2>Founding members lock their rate. From $49.99 a month.</h2>
-        <p>The first cohort helps establish the conversations and culture of the community. Founding members receive a permanent founding designation and a locked founding rate for the life of their membership.</p>
+        <p>Founding membership is open from <strong>September 29 through October 11</strong>. The first cohort helps set the conversations and culture of the community, and keeps the founding rate for as long as their membership stays active.</p>
       </div>
       <figure class="founding-card fade-up">
         <img src="founding-member-card-front-outlined.svg" alt="Founding Member card specimen showing No. 001 and Founding Rate Locked">
@@ -427,38 +426,23 @@ img { max-width: 100%; display: block; }
       <div class="price-card fade-up">
         <div class="price-badge">Founding Member</div>
         <div class="price-amount"><span class="price-currency">$</span><span class="price-value">97</span><span class="price-period">/ month</span></div>
-        <p class="price-desc">Locked for life. Recurring, cancellable, permanently discounted.</p>
-        <ul class="price-features"><li>Permanent founding designation</li><li>Rate locked for the life of the membership</li><li>Full member program access</li><li>5 live sessions every weekday</li><li>Weekly Scott Live</li><li>Pack Notes research library</li><li>Pack Sessions with guests</li><li>Member Directory and community</li></ul>
-        <a href="#" class="btn btn-outline-brass">Claim your founding spot</a>
+        <p class="price-desc">Rate locked for as long as you stay a member. Recurring, cancel any time.</p>
+        <ul class="price-features"><li>Permanent founding designation</li><li>Founding rate locked while your membership stays active</li><li>Full member program access</li><li>Live sessions every weekday</li><li>Weekly Scott Live</li><li>Pack Notes research library</li><li>Pack Sessions with guests</li><li>Member Directory and community</li></ul>
+        <a href="#" class="btn btn-outline-brass">Join the Pack</a>
       </div>
       <div class="price-card price-card-founding fade-up">
         <div class="price-badge">Founding Member &middot; Annual &middot; Best value</div>
         <div class="price-amount"><span class="price-currency">$</span><span class="price-value">49.99</span><span class="price-period">/ month</span></div>
-        <p class="price-desc"><strong>Billed annually at $599.</strong> Save $565 versus paying monthly. Locked for life.</p>
-        <ul class="price-features"><li>Permanent founding designation</li><li>Rate locked for the life of the membership</li><li>Full member program access</li><li>5 live sessions every weekday</li><li>Weekly Scott Live</li><li>Pack Notes research library</li><li>Pack Sessions with guests</li><li>Member Directory and community</li></ul>
-        <a href="#" class="btn btn-brass">Claim your founding spot</a>
+        <p class="price-desc"><strong>Billed annually at $599.</strong> Save $565 versus paying monthly. Rate locked for as long as you stay a member.</p>
+        <ul class="price-features"><li>Permanent founding designation</li><li>Founding rate locked while your membership stays active</li><li>Full member program access</li><li>Live sessions every weekday</li><li>Weekly Scott Live</li><li>Pack Notes research library</li><li>Pack Sessions with guests</li><li>Member Directory and community</li></ul>
+        <a href="#" class="btn btn-brass">Join the Pack</a>
       </div>
     </div>
     <!-- Standard pricing note -->
     <div class="pricing-standard-note fade-up">
-      <div class="pricing-standard-note-label">After the founding cohort</div>
-      <div class="pricing-standard-note-text">Standard membership opens at <strong>$149/month</strong> at a visible capability milestone. Founding members keep $97 for life.</div>
+      <div class="pricing-standard-note-label">After the founding window</div>
+      <div class="pricing-standard-note-text">After October 11, membership is <strong>$147/month or $1,199/year</strong>, and founding status is closed. Founding members keep their rate.</div>
     </div>
-    <div class="founding-anchor fade-up">
-      <p>The median advertised price across 50+ paid groups analyzed is <strong>$110/month</strong>. Founding members lock <strong>$97/month</strong>, forever. A price lock, not lifetime prepay. Recurring, cancellable, permanently discounted.</p>
-    </div>
-  </div>
-</section>
-<!-- TESTIMONIALS -->
-<section class="section testimonials" id="testimonials">
-  <div class="container">
-    <div class="testimonials-header fade-up"><div class="eyebrow">From the room</div><h2>What members are saying.</h2><p>Placeholder testimonials to be replaced with real member quotes before launch.</p></div>
-    <div class="testimonials-grid">
-      <div class="testimonial-card fade-up"><p class="testimonial-quote">The Pack Notes alone are worth the membership. Getting to see the actual research behind Scott's commentary, not just the conclusions, changed how I evaluate my own positions.</p><div class="testimonial-author"><div class="testimonial-avatar"><span>MR</span></div><div><div class="testimonial-name">Marcus R.</div><div class="testimonial-role">Portfolio manager, 12 years</div></div></div></div>
-      <div class="testimonial-card fade-up"><p class="testimonial-quote">I've been in five paid crypto groups. This is the first one that felt like a room of peers, not a pump channel. The team actually engages with your questions. The guests are people I recognized from the show.</p><div class="testimonial-author"><div class="testimonial-avatar"><span>JL</span></div><div><div class="testimonial-name">Jen L.</div><div class="testimonial-role">Independent investor</div></div></div></div>
-      <div class="testimonial-card fade-up"><p class="testimonial-quote">The Thursday Crossover session is the best part of my week. The conversation that doesn't make the show edit. You're hearing the real back-and-forth, not the produced version.</p><div class="testimonial-author"><div class="testimonial-avatar"><span>DK</span></div><div><div class="testimonial-name">David K.</div><div class="testimonial-role">Founder, fintech startup</div></div></div></div>
-    </div>
-    <p class="testimonial-placeholder-note fade-up">Placeholder quotes. To be replaced with verified member testimonials before public launch.</p>
   </div>
 </section>
 <section class="telegram-section" id="telegram">
@@ -467,9 +451,9 @@ img { max-width: 100%; display: block; }
     <h2 class="fade-up">What happens to the free channels.</h2>
     <p class="fade-up">The paid Whop membership replaces the free Telegram channels. Here is exactly how the transition works.</p>
     <div class="telegram-steps">
-      <div class="telegram-step fade-up"><div class="telegram-step-num">STEP 01</div><div class="telegram-step-title">Join the Pack</div><div class="telegram-step-desc">Claim your founding spot on Whop. You will receive access instructions immediately after joining.</div></div>
+      <div class="telegram-step fade-up"><div class="telegram-step-num">STEP 01</div><div class="telegram-step-title">Join the Pack</div><div class="telegram-step-desc">Join on Whop. You will receive access instructions immediately after joining.</div></div>
       <div class="telegram-step fade-up"><div class="telegram-step-num">STEP 02</div><div class="telegram-step-title">Migrate your access</div><div class="telegram-step-desc">Connect your Whop account to the community. Your member profile and directory entry are created automatically.</div></div>
-      <div class="telegram-step fade-up"><div class="telegram-step-num">STEP 03</div><div class="telegram-step-title">Free channels close</div><div class="telegram-step-desc">Confirmed transition dates will be announced in advance. The free Telegram channels close after the founding cohort fills.</div></div>
+      <div class="telegram-step fade-up"><div class="telegram-step-num">STEP 03</div><div class="telegram-step-title">Free channels close</div><div class="telegram-step-desc">Transition dates will be announced in advance, in the channels themselves, before anything closes.</div></div>
     </div>
     <p class="telegram-note fade-up">Nothing enrolls you or charges you automatically. You choose to join. You choose to migrate. The free channels stay open until the transition is announced.</p>
   </div>
@@ -481,14 +465,15 @@ img { max-width: 100%; display: block; }
       <details class="faq-item fade-up"><summary class="faq-question">What is The Wolf Pack?<span class="faq-icon"></span></summary><div class="faq-answer">A curated community where Scott opens up the team, research and network behind his work, and members participate through questions, discussion and relationships with each other.</div></details>
       <details class="faq-item fade-up"><summary class="faq-question">What does access include?<span class="faq-icon"></span></summary><div class="faq-answer">The member program defines the sessions, research, team participation and guest access currently included. The confirmed scope and cadence are published alongside the membership page so you know exactly what's in the room before you join.</div></details>
       <details class="faq-item fade-up"><summary class="faq-question">Does "open" mean the research is public?<span class="faq-icon"></span></summary><div class="faq-answer">No. The community and its materials are provided through membership. Sharing and redistribution follow the membership terms. "Open sourcing" is the internal analogy for sharing resources with members, not a public license.</div></details>
+      <details class="faq-item fade-up"><summary class="faq-question">Is this investment advice?<span class="faq-icon"></span></summary><div class="faq-answer">No. Everything in the community is for education and discussion. Scott, the team and guests share their views and reasoning; none of it is a recommendation to buy, sell or hold anything, and none of it is tailored to you. Scott, team members and guests may hold positions in assets discussed.</div></details>
       <details class="faq-item fade-up"><summary class="faq-question">How do I join?<span class="faq-icon"></span></summary><div class="faq-answer">Use the official membership page on Whop. The link will be published with the confirmed program details before launch.</div></details>
-      <details class="faq-item fade-up"><summary class="faq-question">What is a Founding Member?<span class="faq-icon"></span></summary><div class="faq-answer">Founding Member is a permanent founding-status label, not a newly invented paid tier. Founding members receive a locked founding rate for the life of their membership and help establish the conversations and culture of the community.</div></details>
+      <details class="faq-item fade-up"><summary class="faq-question">What is a Founding Member?<span class="faq-icon"></span></summary><div class="faq-answer">Anyone who joins between September 29 and October 11, 2026. Founding Members get a permanent designation with their member number and keep the founding rate for as long as their membership stays continuously active. If you cancel and return later, you rejoin at the standard rate.</div></details>
     </div>
   </div>
 </section>
 <section class="section section-navy final-cta">
   <div class="final-cta-arc"></div>
-  <div class="container"><div class="fade-up"><h2>Your community. Scott's world.</h2><p>Bring a question. Add a perspective. Get to know the people in the room.</p><div class="cta-group" style="justify-content: center;"><a href="#founding" class="btn btn-brass btn-large">Claim your founding spot</a></div></div></div>
+  <div class="container"><div class="fade-up"><h2>The room is open.</h2><p>Founding membership closes October 11. After that, the founding rate is gone and the standard rate applies. Bring a question. Add a perspective. Get to know the people in the room.</p><div class="cta-group" style="justify-content: center;"><a href="#founding" class="btn btn-brass btn-large">Join the Pack</a></div></div></div>
 </section>
 <footer class="footer">
   <div class="container">
@@ -498,12 +483,12 @@ img { max-width: 100%; display: block; }
       <div class="footer-col"><h5>Connect</h5><ul><li><a href="#">Scott on X</a></li><li><a href="#">The Wolf of All Streets</a></li><li><a href="#">Yahoo Finance</a></li><li><a href="#">Support</a></li></ul></div>
     </div>
     <div class="footer-legal">
-      <p class="footer-disclaimer"><strong>Education and discussion. Not investment advice.</strong> The Wolf Pack is a curated community focused on research, education and discussion. It is not a signals service and does not provide personalized investment advice. Membership access and billing are governed by your membership terms. No pooled funds, no execution, no custody. Full disclosure discipline applies to sponsors and positions. Member materials are subject to the membership sharing policy.</p>
-      <div class="footer-bottom"><span>&copy; 2026 The Wolf Pack. All rights reserved.</span><span>From The Wolf of All Streets</span></div>
+      <p class="footer-disclaimer"><strong>Education and discussion. Not investment advice.</strong> The Wolf Pack is a curated community focused on research, education and discussion. It is not a signals service and does not provide personalized investment advice. Membership access and billing are governed by your membership terms. No pooled funds, no execution, no custody. Scott, team members and guests may hold positions in assets discussed. Member materials are subject to the membership sharing policy.</p>
+      <div class="footer-bottom"><span>&copy; 2026 WOAS Ventures LLC. All rights reserved.</span><span>From The Wolf of All Streets</span></div>
     </div>
   </div>
 </footer>
-<div class="scroll-cta" id="scrollCta"><div><div class="scroll-cta-text">Founding Membership</div><div class="scroll-cta-price">$97/mo — locked for life</div></div><a href="#founding" class="btn btn-brass">Join</a></div>
+<div class="scroll-cta" id="scrollCta"><div><div class="scroll-cta-text">Founding Membership</div><div class="scroll-cta-price">From $49.99/mo · closes Oct 11</div></div><a href="#founding" class="btn btn-brass">Join</a></div>
 <script>
 const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}})},{threshold:0.1,rootMargin:'0px 0px -60px 0px'});
 document.querySelectorAll('.fade-up').forEach(el=>io.observe(el));
