@@ -34,6 +34,12 @@
 .founding-card{margin:0;max-width:520px;justify-self:center}
 .founding-card img{width:100%;height:auto;border-radius:6px;border:1px solid rgba(201,169,110,.35);box-shadow:0 24px 48px rgba(0,0,0,.35)}
 .founding-card figcaption{margin-top:12px;font-size:.8rem;color:var(--fog);text-align:center;letter-spacing:.02em}
+
+.pack-card-grid{display:grid;grid-template-columns:1fr;gap:32px;align-items:center}
+@media(min-width:900px){.pack-card-grid{grid-template-columns:1.4fr .6fr;gap:56px}}
+.pack-notes-specimen{margin:0;max-width:300px;justify-self:center}
+.pack-notes-specimen img{width:100%;height:auto;border-radius:4px;box-shadow:0 20px 40px rgba(0,0,0,.35)}
+.pack-notes-specimen figcaption{margin-top:12px;font-size:.8rem;color:var(--fog);text-align:center;line-height:1.5}
 </style>
 <style>
 :root {
@@ -349,7 +355,19 @@ img { max-width: 100%; display: block; }
       <div class="input-card fade-up"><div class="input-number">01 / THE TEAM</div><h3>The people behind the work.</h3><p>The analysts, researchers, and operators behind Scott's commentary, brought into member conversations through the announced program. Not names on a slide. People you can ask questions and compare notes with.</p></div>
       <div class="input-card fade-up"><div class="input-number">02 / THE RESEARCH</div><h3>The work behind the conclusions.</h3><p>Original research, context, and frameworks members can examine and discuss. Pack Notes lays out the reasoning, not just the take. You see what informed the view, and you can challenge it.</p></div>
       <div class="input-card fade-up"><div class="input-number">03 / THE NETWORK</div><h3>Guests and relationships.</h3><p>Curated Pack Sessions bring guests from Scott's network into the community. The same voices you recognize from the show, in a members-only conversation where you can bring your own questions.</p></div>
-      <div class="input-card input-card-pack input-card-full fade-up"><div class="input-number">04 / THE PACK</div><h3>The room where it all comes together.</h3><p>The shared space where members ask questions, contribute perspectives, and connect with peers. Scott supplies the starting resources. The community makes those resources more useful together. Community is the product. Access is what gives it substance. Participation is what makes it the Pack.</p></div>
+      <div class="input-card input-card-pack input-card-full fade-up">
+        <div class="pack-card-grid">
+          <div>
+            <div class="input-number">04 / THE PACK</div>
+            <h3>The room where it all comes together.</h3>
+            <p>The shared space where members ask questions, contribute perspectives, and connect with peers. Scott supplies the starting resources. The community makes those resources more useful together. Community is the product. Access is what gives it substance. Participation is what makes it the Pack.</p>
+          </div>
+          <figure class="pack-notes-specimen">
+            <img src="pack-notes-cover-1080x1350-outlined.svg" alt="Pack Notes cover specimen: A framework for better questions, with sections for context, assumptions and discussion">
+            <figcaption>Pack Notes. Every note separates context, assumptions and open questions.</figcaption>
+          </figure>
+        </div>
+      </div>
     </div>
   </div>
 </section>
