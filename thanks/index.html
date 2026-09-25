@@ -22,6 +22,11 @@
 <meta name="theme-color" content="#18263C">
 <link rel="preload" href="/fonts/Rubik-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/NotoSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<script>
+// Personalization: set Whop's post-checkout redirect to
+//   https://wolf-pack-lander.vercel.app/thanks/?name=FIRSTNAME&number=MEMBERNUMBER
+// The page works without the params; with them it greets by name and shows the number.
+</script>
 <style>
 /* Self-hosted brand fonts. Rubik 1.100 and Noto Sans 2.015, SIL Open Font License 1.1; licenses in /fonts/. */
 @font-face{font-family:'Rubik';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/Rubik-Regular.woff2) format('woff2')}
@@ -318,6 +323,39 @@ img { max-width: 100%; display: block; }
 .support a.mail{color:var(--brass);font-family:'Rubik',sans-serif;font-size:1.1rem}
 .policies-row{margin-top:32px;display:flex;gap:24px;justify-content:center;flex-wrap:wrap;font-size:.85rem}
 .policies-row a{color:var(--fog);text-decoration:underline;text-underline-offset:3px}
+
+.step-link{display:inline-block;margin-top:14px;font-family:'Rubik',sans-serif;font-weight:700;font-size:.95rem;color:var(--navy);text-decoration:none;border-bottom:1px solid var(--brass);padding-bottom:2px}
+.step-link:hover{color:var(--brass-dark)}
+.closing{background:var(--navy);color:var(--paper);text-align:center;position:relative;overflow:hidden}
+.closing h2{font-family:'Rubik',sans-serif;font-weight:400;font-size:clamp(2rem,4.5vw,3rem);margin-bottom:12px}
+.closing p{color:var(--fog);margin-bottom:28px}
+.support{background:var(--ink)}
+
+.ty-reveal{width:min(260px,100%);height:auto;display:block}
+.founding-strip{background:var(--ink);border-top:1px solid rgba(201,169,110,.25);border-bottom:1px solid rgba(201,169,110,.25);padding:22px 0}
+.founding-strip .container{display:flex;gap:24px;align-items:baseline;flex-wrap:wrap}
+.fs-label{font-family:'Noto Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--brass);white-space:nowrap}
+.fs-text{font-family:'Rubik',sans-serif;font-size:1.15rem;color:var(--paper)}
+
+.video-section{background:var(--navy);padding:72px 0 0;padding-bottom:0}
+.video-section .container{padding-bottom:0}
+.video-frame{margin-bottom:0}
+.video-context{text-align:center;font-family:'Rubik',sans-serif;font-size:1.15rem;color:var(--paper);margin:0 0 24px}
+.video-frame{position:relative;max-width:800px;margin:0 auto;aspect-ratio:16/9;background:var(--ink);border:1px solid rgba(201,169,110,.3);border-radius:4px;overflow:hidden;cursor:pointer}
+.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;opacity:.4}
+.video-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:84px;height:84px;border-radius:50%;background:var(--brass);display:flex;align-items:center;justify-content:center;transition:var(--transition)}
+.video-frame:hover .video-play{background:var(--brass-light)}
+.video-play svg{width:34px;height:34px;fill:var(--navy);margin-left:4px}
+.steps-after-video{padding-top:140px}
+.video-section{padding-bottom:72px}
+@media(max-width:767px){.video-section{padding-top:56px}.steps-after-video{padding-top:104px}}
+
+.step-check{display:inline-block;width:14px;height:14px;border:1.5px solid var(--brass);border-radius:50%;margin-right:10px;vertical-align:-2px;position:relative}
+.step.done .step-check{background:var(--brass)}
+.step.done .step-check::after{content:"";position:absolute;left:4px;top:1px;width:4px;height:7px;border:solid var(--navy);border-width:0 2px 2px 0;transform:rotate(45deg)}
+.step.done h3{color:var(--fog-dark)}
+.step.done .step-link{color:var(--fog-dark);border-bottom-color:transparent}
 </style>
 </head>
 <body>
@@ -327,20 +365,21 @@ img { max-width: 100%; display: block; }
       <div class="nav-symbol"><img src="/wolf-pack-avatar-1024.png" alt="The Wolf Pack" style="border-radius:6px"></div>
       <span class="nav-wordmark">THE WOLF PACK</span>
     </a>
-    <a href="REPLACE-DISCORD-INVITE" class="nav-cta">Enter the community</a>
+    <a href="REPLACE-DISCORD-INVITE" class="nav-cta">Join the Pack</a>
   </div>
 </nav>
 
 <section class="ty-hero">
   <div class="container ty-grid">
     <div>
-      <div class="eyebrow">You're in</div>
-      <h1>Your place in the Pack.</h1>
-      <p class="lede">Scott is opening up more of the team, research and relationships behind his work. <strong>You're here to participate</strong>: ask questions, contribute your experience and get to know the other members.</p>
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="470 383 975 243" class="ty-reveal" role="img" aria-label="The Wolf Pack"><style>@keyframes ring{from{stroke-dashoffset:205.25}to{stroke-dashoffset:0}}@keyframes reveal{from{opacity:0}to{opacity:1}}.ring{stroke-dasharray:205.25;animation:ring .68s ease-in-out .05s both}.w{animation:reveal .36s ease .38s both}.name{animation:reveal .47s ease .65s both}@media(prefers-reduced-motion:reduce){.ring,.w,.name{animation:none;opacity:1;stroke-dashoffset:0}}</style><g transform="translate(480 393) scale(2.5)" fill="none" stroke="#C9A96E"><path class="ring" d="M76.997 82.175 A42 42 0 1 0 23.003 82.175" stroke-width="4.8"/><path class="w" d="M23.5 37 L35.5 67 L50 43 L64.5 67 L76.5 37" stroke-width="6.9"/></g><g class="name"><path d="M815.9675 433.3975V437.9025Q815.9675 438.37 815.6275 438.71000000000004Q815.2875 439.05 814.82 439.05H807.34V460.8525Q807.34 461.32 807.0 461.65999999999997Q806.66 462.0 806.1925 462.0H800.625Q800.1575 462.0 799.8175 461.65999999999997Q799.4775 461.32 799.4775 460.8525V439.05H791.9975Q791.53 439.05 791.19 438.71000000000004Q790.85 438.37 790.85 437.9025V433.3975Q790.85 432.93 791.19 432.59000000000003Q791.53 432.25 791.9975 432.25H814.82Q815.2875 432.25 815.6275 432.59000000000003Q815.9675 432.93 815.9675 433.3975ZM844.9525 433.3975V460.8525Q844.9525 461.32 844.6125 461.65999999999997Q844.2725 462.0 843.805 462.0H838.2375Q837.77 462.0 837.4300000000001 461.65999999999997Q837.09 461.32 837.09 460.8525V450.44H827.655V460.8525Q827.655 461.32 827.315 461.65999999999997Q826.975 462.0 826.5075 462.0H820.9399999999999Q820.4725 462.0 820.1324999999999 461.68125Q819.7925 461.3625 819.7925 460.8525V433.3975Q819.7925 432.93 820.1324999999999 432.59000000000003Q820.4725 432.25 820.9399999999999 432.25H826.5075Q826.975 432.25 827.315 432.59000000000003Q827.655 432.93 827.655 433.3975V443.64H837.09V433.3975Q837.09 432.93 837.4300000000001 432.59000000000003Q837.77 432.25 838.2375 432.25H843.805Q844.2725 432.25 844.6125 432.59000000000003Q844.9525 432.93 844.9525 433.3975ZM858.765 450.44H870.92Q871.3875 450.44 871.7275 450.1Q872.0675 449.76 872.0675 449.2925V444.7875Q872.0675 444.32 871.7275 443.98Q871.3875 443.64 870.92 443.64H858.765V439.05H871.855Q872.3225 439.05 872.6625 438.71000000000004Q873.0025 438.37 873.0025 437.9025V433.3975Q873.0025 432.93 872.6625 432.59000000000003Q872.3225 432.25 871.855 432.25H852.05Q851.5825 432.25 851.2425000000001 432.59000000000003Q850.9025 432.93 850.9025 433.3975V460.8525Q850.9025 461.32 851.2425000000001 461.65999999999997Q851.5825 462.0 852.05 462.0H872.195Q872.6625 462.0 873.0025 461.65999999999997Q873.3425 461.32 873.3425 460.8525V456.3475Q873.3425 455.88 873.0025 455.53999999999996Q872.6625 455.2 872.195 455.2H858.765Z" fill="#F3EFE6"/><path d="M850.4475 562.9 862.4325 497.9225Q862.785 496.27750000000003 863.78375 495.51375Q864.7825 494.75 866.075 494.75H870.775Q871.8325 494.75 872.59625 495.51375Q873.36 496.27750000000003 873.36 497.33500000000004L873.2425 498.275L858.79 570.89Q858.085 574.0625 856.9100000000001 575.53125Q855.735 577.0 853.0325 577.0H848.3325Q845.7475 577.0 844.4549999999999 575.4137499999999Q843.1625 573.8275 842.34 570.89L831.53 531.645L820.72 570.89Q819.8975 573.8275 818.605 575.4137499999999Q817.3125 577.0 814.7275 577.0H810.0275Q807.325 577.0 806.1500000000001 575.53125Q804.975 574.0625 804.27 570.89L789.8175 498.275L789.7 497.33500000000004Q789.7 496.27750000000003 790.46375 495.51375Q791.2275 494.75 792.285 494.75H796.985Q798.2775 494.75 799.27625 495.51375Q800.275 496.27750000000003 800.6275 497.9225L812.6125 562.9L825.5375 516.37Q825.7725 515.195 826.7125000000001 514.07875Q827.6525 512.9625 829.5325 512.9625H833.5275Q835.4075 512.9625 836.3475000000001 514.07875Q837.2875 515.195 837.5225 516.37ZM949.9699999999999 525.4175Q950.2049999999999 532.4675 950.2049999999999 535.875Q950.2049999999999 539.2825 949.9699999999999 546.3325Q949.6175 555.2625 945.7987499999999 562.48875Q941.9799999999999 569.715 934.7537499999999 573.9449999999999Q927.5274999999999 578.175 917.54 578.175Q907.5524999999999 578.175 900.3262499999998 573.9449999999999Q893.0999999999999 569.715 889.28125 562.48875Q885.4625 555.2625 885.1099999999999 546.3325Q884.9925 542.8075 884.9925 535.875Q884.9925 528.9425 885.1099999999999 525.4175Q885.3449999999999 516.4875 889.1637499999999 509.26125Q892.9825 502.035 900.2674999999999 497.805Q907.5524999999999 493.575 917.54 493.575Q927.5274999999999 493.575 934.8125 497.805Q942.0975 502.035 945.91625 509.26125Q949.7349999999999 516.4875 949.9699999999999 525.4175ZM896.2724999999999 526.005Q896.155 529.53 896.155 535.875Q896.155 542.22 896.2724999999999 545.745Q896.625 556.555 902.3824999999999 562.0775Q908.14 567.6 917.54 567.6Q926.9399999999999 567.6 932.6975 562.0775Q938.4549999999999 556.555 938.8074999999999 545.745Q939.0424999999999 538.695 939.0424999999999 535.875Q939.0424999999999 533.055 938.8074999999999 526.005Q938.4549999999999 515.195 932.6975 509.6725Q926.9399999999999 504.15 917.54 504.15Q908.14 504.15 902.3824999999999 509.6725Q896.625 515.195 896.2724999999999 526.005ZM1021.2925 569.5975V573.8275Q1021.2925 575.12 1020.3525 576.06Q1019.4125 577.0 1018.12 577.0H970.2975Q969.005 577.0 968.065 576.06Q967.125 575.12 967.125 573.8275V497.9225Q967.125 496.63 968.065 495.69Q969.005 494.75 970.2975 494.75H975.115Q976.4075 494.75 977.3475000000001 495.69Q978.2875 496.63 978.2875 497.9225V566.425H1018.12Q1019.4125 566.425 1020.3525 567.365Q1021.2925 568.305 1021.2925 569.5975ZM1086.6225 497.9225V502.15250000000003Q1086.6225 503.445 1085.6825 504.385Q1084.7425 505.325 1083.45 505.325H1044.7925V532.4675H1081.1Q1082.3925 532.4675 1083.3325 533.4075Q1084.2725 534.3475 1084.2725 535.64V539.87Q1084.2725 541.1625 1083.3325 542.1025Q1082.3925 543.0425 1081.1 543.0425H1044.7925V573.8275Q1044.7925 575.12 1043.8525 576.06Q1042.9125 577.0 1041.62 577.0H1036.8025Q1035.51 577.0 1034.57 576.06Q1033.6299999999999 575.12 1033.6299999999999 573.8275V497.9225Q1033.6299999999999 496.63 1034.57 495.69Q1035.51 494.75 1036.8025 494.75H1083.45Q1084.7425 494.75 1085.6825 495.69Q1086.6225 496.63 1086.6225 497.9225ZM1191.1975 519.66Q1191.1975 527.885 1187.3787499999999 533.6424999999999Q1183.56 539.4 1177.15625 542.22Q1170.7525 545.04 1162.88 545.04H1141.26V573.8275Q1141.26 575.12 1140.3200000000002 576.06Q1139.38 577.0 1138.0875 577.0H1133.27Q1131.9775 577.0 1131.0375 576.06Q1130.0975 575.12 1130.0975 573.8275V497.9225Q1130.0975 496.63 1131.0375 495.69Q1131.9775 494.75 1133.27 494.75H1162.88Q1175.1000000000001 494.75 1183.14875 501.095Q1191.1975 507.44 1191.1975 519.66ZM1162.2925 534.465Q1170.8700000000001 534.465 1175.4525 530.7637500000001Q1180.035 527.0625 1180.035 519.66Q1180.035 505.325 1162.2925 505.325H1141.26V534.465ZM1214.6975000000002 558.435 1208.5875 574.0625Q1207.5300000000002 577.0 1204.005 577.0H1199.6575Q1198.6000000000001 577.0 1197.8362500000003 576.2362499999999Q1197.0725000000002 575.4725 1197.0725000000002 574.415Q1197.0725000000002 573.8275 1197.5425 572.77L1226.3300000000002 498.6275Q1227.8575 494.75 1231.6175 494.75H1238.6675Q1242.4275 494.75 1243.9550000000002 498.6275L1272.625 572.77Q1273.095 573.8275 1273.095 574.415Q1273.095 575.4725 1272.3312500000002 576.2362499999999Q1271.5675 577.0 1270.5100000000002 577.0H1266.1625000000001Q1262.6375 577.0 1261.5800000000002 574.0625L1255.47 558.435ZM1251.3575 547.86 1235.1425000000002 505.9125 1218.8100000000002 547.86ZM1315.2775000000001 567.6Q1325.6175000000003 567.6 1330.5525000000002 563.135Q1335.4875000000002 558.67 1337.1325000000002 551.62Q1337.3675000000003 550.445 1338.2487500000002 549.74Q1339.13 549.035 1340.1875000000002 549.035H1345.5925000000002Q1346.65 549.035 1347.4137500000002 549.7987499999999Q1348.1775000000002 550.5625 1348.1775000000002 551.62Q1347.9425 557.3775 1344.4175 563.5462500000001Q1340.8925000000002 569.715 1333.5487500000002 573.9449999999999Q1326.2050000000002 578.175 1315.2775000000001 578.175Q1305.4075000000003 578.175 1298.005 574.0625Q1290.6025000000002 569.95 1286.5487500000002 562.72375Q1282.4950000000001 555.4975 1282.1425000000002 546.3325Q1282.025 542.8075 1282.025 535.875Q1282.025 528.9425 1282.1425000000002 525.4175Q1282.4950000000001 516.2525 1286.5487500000002 509.02625Q1290.6025000000002 501.8 1298.005 497.6875Q1305.4075000000003 493.575 1315.2775000000001 493.575Q1326.2050000000002 493.575 1333.5487500000002 497.805Q1340.8925000000002 502.035 1344.4175 508.20375Q1347.9425 514.3725 1348.1775000000002 520.13Q1348.1775000000002 521.1875 1347.4137500000002 521.9512500000001Q1346.65 522.715 1345.5925000000002 522.715H1340.1875000000002Q1339.13 522.715 1338.2487500000002 522.01Q1337.3675000000003 521.305 1337.1325000000002 520.13Q1335.4875000000002 513.08 1330.5525000000002 508.615Q1325.6175000000003 504.15 1315.2775000000001 504.15Q1305.0550000000003 504.15 1299.3562500000003 510.08375Q1293.6575000000003 516.0175 1293.3050000000003 526.005Q1293.1875000000002 529.53 1293.1875000000002 535.875Q1293.1875000000002 542.22 1293.3050000000003 545.745Q1293.6575000000003 555.7325 1299.3562500000003 561.66625Q1305.0550000000003 567.6 1315.2775000000001 567.6ZM1420.91 572.3Q1422.085 573.475 1422.085 574.415Q1422.085 575.4725 1421.32125 576.2362499999999Q1420.5575000000001 577.0 1419.5000000000002 577.0H1412.2150000000001Q1409.7475000000002 577.0 1407.9850000000001 575.2375L1374.7325 543.5125V573.8275Q1374.7325 575.12 1373.7925 576.06Q1372.8525000000002 577.0 1371.5600000000002 577.0H1366.7425Q1365.45 577.0 1364.5100000000002 576.06Q1363.5700000000002 575.12 1363.5700000000002 573.8275V497.9225Q1363.5700000000002 496.63 1364.5100000000002 495.69Q1365.45 494.75 1366.7425 494.75H1371.5600000000002Q1372.8525000000002 494.75 1373.7925 495.69Q1374.7325 496.63 1374.7325 497.9225V525.3L1406.1050000000002 496.5125Q1407.8675 494.75 1410.335 494.75H1417.15Q1418.2075000000002 494.75 1418.97125 495.51375Q1419.7350000000001 496.27750000000003 1419.7350000000001 497.33500000000004Q1419.7350000000001 498.275 1418.5600000000002 499.45L1380.8425000000002 534.1125Z" fill="#F3EFE6"/></g></svg>
+      <div class="eyebrow" style="margin-top:20px">You're in</div>
+      <h1 data-headline>Welcome to the Pack.</h1>
+      <p class="lede"><span data-member-line>You're a Founding Member.</span> <strong>The room is open now</strong>, and Scott and the team are building it with the first cohort. You're in it.</p>
       <div class="cta-group">
-        <a href="REPLACE-DISCORD-INVITE" class="btn btn-brass btn-large">Enter the community</a>
+        <a href="REPLACE-DISCORD-INVITE" class="btn btn-brass btn-large">Join the Pack</a>
       </div>
-      <p class="ty-note">Your welcome email is on its way with the same link, your member details and where to get help. Can't find it? Check spam, then write to <a href="mailto:Ishan@WOASVentures.com">Ishan@WOASVentures.com</a>.</p>
+      <p class="ty-note">Your welcome email is on its way with the same link, your member details and where to get help.</p>
     </div>
     <div class="ty-art">
       <img src="/community-welcome-1600x900-outlined.svg" alt="Your place in the Pack. Team, research, network, community." width="1600" height="900">
@@ -348,24 +387,51 @@ img { max-width: 100%; display: block; }
   </div>
 </section>
 
-<section class="section steps-section">
+<div class="founding-strip">
   <div class="container">
-    <h2>Make the first visit count.</h2>
+    <span class="fs-label" data-fs-label>Founding Member</span>
+    <span class="fs-text">Permanent. Numbered. Rate locked while your membership stays active.</span>
+  </div>
+</div>
+
+<section class="video-section">
+  <div class="container">
+    <p class="video-context">A word from Scott before you walk in.</p>
+    <!-- VIDEO PLACEHOLDER.
+         Self-hosted MP4: replace the <div class="video-frame"> with
+           <video class="video-frame" controls preload="none" poster="/scott-video-poster.jpg" playsinline>
+             <source src="/scott-welcome.mp4" type="video/mp4">
+           </video>
+         YouTube/Vimeo: keep this div, set data-embed to the embed URL, and the click handler below swaps in the iframe (facade loader). -->
+    <div class="video-frame" data-embed="" role="button" tabindex="0" aria-label="Play Scott's welcome video">
+      <img src="/scott.jpg" alt="" class="video-poster">
+      <span class="video-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+    </div>
+  </div>
+</section>
+
+<section class="section steps-section steps-after-video">
+  <div class="container">
+    <h2>Three things to do right now.</h2>
+    <p style="margin:-32px 0 40px;color:var(--fog-dark);max-width:36em">In this order. The whole thing takes a few minutes.</p>
     <div class="steps-grid">
-      <div class="step">
-        <div class="step-num">01 / ENTER</div>
-        <h3>Open the community</h3>
-        <p>Use the button above or the link in your welcome email. Start Here explains the current program and where to find help.</p>
+      <div class="step" data-step="1">
+        <div class="step-num"><span class="step-check" aria-hidden="true"></span>01 / CONNECT</div>
+        <h3>Connect Discord and join</h3>
+        <p>The Pack is hosted on Discord. Connect your Discord account to Whop and join the community. About 30 seconds. No Discord account? You can create one free during this step.</p>
+        <a class="step-link" href="REPLACE-DISCORD-INVITE" data-complete="1" target="_blank" rel="noopener">Connect Discord and join →</a>
       </div>
-      <div class="step">
-        <div class="step-num">02 / INTRODUCE</div>
-        <h3>Set up your profile and say hello</h3>
-        <p>Share the context you're comfortable sharing. What are you interested in? What would you like to understand better? What experience might help someone else?</p>
+      <div class="step" data-step="2">
+        <div class="step-num"><span class="step-check" aria-hidden="true"></span>02 / INTRODUCE</div>
+        <h3>Post in introductions</h3>
+        <p>Your name, what you do, and what you're here to learn. That's how the room gets to know you and how the right people find you.</p>
+        <a class="step-link" href="REPLACE-INTRODUCTIONS-LINK" data-complete="2" target="_blank" rel="noopener">Go to introductions →</a>
       </div>
-      <div class="step">
-        <div class="step-num">03 / PARTICIPATE</div>
-        <h3>Read Pack Notes. Bring one question.</h3>
-        <p>See who's in the room and which Pack Sessions are coming. Bring one clear question to the next one.</p>
+      <div class="step" data-step="3">
+        <div class="step-num"><span class="step-check" aria-hidden="true"></span>03 / SHOW UP</div>
+        <h3>Learn the layout. Mark the next Pack Session.</h3>
+        <p>Start Here shows how the community is laid out. Pack Sessions are the live calls with Scott and the community. Put the next one on your calendar.</p>
+        <a class="step-link" href="REPLACE-SCHEDULE-LINK" data-complete="3" target="_blank" rel="noopener">See the schedule →</a>
       </div>
     </div>
   </div>
@@ -375,25 +441,33 @@ img { max-width: 100%; display: block; }
   <div class="container joined-grid">
     <figure>
       <img src="/founding-member-card-back-outlined.svg" alt="Founding Member card: A place to ask. A reason to return. Founding status is permanent. Rate terms apply.">
-      <figcaption>Your founding number is assigned in order of joining and appears in the community.</figcaption>
+      <figcaption data-card-caption>Your founding number is assigned in order of joining and appears in the community.</figcaption>
     </figure>
     <div>
-      <h2>What you've joined.</h2>
-      <p>A community built around the team, research and relationships behind Scott Melker, where access becomes conversation and members build relationships with each other.</p>
+      <h2>You've joined a living room.</h2>
+      <p>Not a course you download and forget. The research, the team, the conversations and the network behind everything Scott does, in one place where you're part of it. Not a signals group, and never will be. Here's what's running inside.</p>
       <ul>
-        <li><strong>Pack Notes.</strong> Research and frameworks from Scott and the team, written to be examined and discussed.</li>
-        <li><strong>Pack Sessions.</strong> Live conversations with Scott, the team and guests. Replays are kept for members.</li>
+        <li><strong>Pack Notes.</strong> New research, theses and discussion every week from Scott and the team, written to be examined, not just consumed.</li>
+        <li><strong>Pack Sessions.</strong> A live session every week where Scott answers your questions directly, plus conversations with the team and guests. Replays are kept for members.</li>
         <li><strong>The Pack.</strong> Member conversations, a Start Here path, and the people behind the work, in the room with you.</li>
-        <li><strong>Founding status.</strong> Permanent, numbered, and your rate stays put for as long as your membership stays active.</li>
+        <li><strong>Founding status.</strong> Permanent. Numbered. Your rate stays put for as long as your membership stays active. You're in the first cohort.</li>
       </ul>
     </div>
+  </div>
+</section>
+
+<section class="section closing">
+  <div class="container">
+    <h2 data-close-h>The room is open.</h2>
+    <p data-close-p>Connect your Discord to Whop and join the community. About 30 seconds.</p>
+    <a href="REPLACE-DISCORD-INVITE" class="btn btn-brass btn-large" data-close-cta>Connect Discord and join the Pack</a>
   </div>
 </section>
 
 <section class="section support">
   <div class="container">
     <h2>Need a hand?</h2>
-    <p>Access, billing or moderation questions go to the team. Membership and billing are managed through your Whop account, where you can cancel any time.</p>
+    <p>Access, billing or moderation questions go to the team. Manage your membership through your Whop account.</p>
     <a class="mail" href="mailto:Ishan@WOASVentures.com">Ishan@WOASVentures.com</a>
     <div class="policies-row">
       <a href="REPLACE-TERMS-URL">Terms of Service</a>
@@ -412,5 +486,42 @@ img { max-width: 100%; display: block; }
     </div>
   </div>
 </footer>
+<script>
+// Facade loader: swaps the poster for the real embed on first click, so nothing loads until the member asks for it.
+(function(){var f=document.querySelector('.video-frame[data-embed]');if(!f)return;function go(){var u=f.getAttribute('data-embed');if(!u)return;var i=document.createElement('iframe');i.src=u+(u.indexOf('?')>-1?'&':'?')+'autoplay=1';i.allow='autoplay; encrypted-media; picture-in-picture';i.allowFullscreen=true;f.innerHTML='';f.appendChild(i);}f.addEventListener('click',go);f.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();go();}});})();
+</script>
+<script>
+(function(){
+  var q=new URLSearchParams(location.search);
+  var name=(q.get('name')||'').trim().replace(/[^A-Za-z\-' ]/g,'').slice(0,24);
+  var num=(q.get('number')||'').replace(/\D/g,'').slice(0,5);
+  var padded=num?('No. '+num.padStart(3,'0')):'';
+  if(name){document.querySelector('[data-headline]').textContent='Welcome to the Pack, '+name+'.';}
+  if(padded){
+    document.querySelector('[data-member-line]').textContent="You're Founding Member "+padded+'.';
+    document.querySelector('[data-fs-label]').textContent='Founding Member '+padded;
+    document.querySelector('[data-card-caption]').textContent='Your founding number is '+padded+'. It appears in the community.';
+  }
+  var KEY='wp-onboard';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){return{}}}
+  function save(o){try{localStorage.setItem(KEY,JSON.stringify(o))}catch(e){}}
+  var state=load();
+  function render(){
+    var allDone=true;
+    document.querySelectorAll('[data-step]').forEach(function(el){
+      var d=!!state[el.getAttribute('data-step')]; el.classList.toggle('done',d); if(!d)allDone=false;
+    });
+    if(allDone){
+      document.querySelector('[data-close-h]').textContent="You're all set.";
+      document.querySelector('[data-close-p]').textContent="See you in the Pack.";
+      document.querySelector('[data-close-cta]').textContent='Open the community';
+    }
+  }
+  document.querySelectorAll('[data-complete]').forEach(function(a){
+    a.addEventListener('click',function(){state[a.getAttribute('data-complete')]=true;save(state);setTimeout(render,50);});
+  });
+  render();
+})();
+</script>
 </body>
 </html>
