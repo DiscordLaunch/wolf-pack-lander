@@ -20,7 +20,15 @@
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="theme-color" content="#18263C">
-<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/Rubik-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/NotoSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+/* Self-hosted brand fonts. Rubik 1.100 and Noto Sans 2.015, SIL Open Font License 1.1; licenses in /fonts/. */
+@font-face{font-family:'Rubik';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/Rubik-Regular.woff2) format('woff2')}
+@font-face{font-family:'Rubik';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/Rubik-Bold.woff2) format('woff2')}
+@font-face{font-family:'Noto Sans';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/NotoSans-Regular.woff2) format('woff2')}
+@font-face{font-family:'Noto Sans';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/NotoSans-Bold.woff2) format('woff2')}
+</style>
 <style>
 :root {
   --navy: #18263C; --navy-deep: #111a2b; --paper: #F3EFE6; --paper-warm: #EDE7D9;
